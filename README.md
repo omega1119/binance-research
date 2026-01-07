@@ -1,6 +1,6 @@
 # Binance Cryptocurrency Correlation Analysis
 
-This project fetches historical cryptocurrency price data from Binance and analyzes the correlation between Bitcoin (BTC) and Ethereum (ETH). The script retrieves market data, calculates correlations, and visualizes rolling correlations over time.
+This project fetches historical cryptocurrency price data from Binance and analyzes the correlation between Bitcoin (BTC) and Ethereum (ETH). The notebook retrieves market data, calculates correlations, and visualizes rolling correlations over time.
 
 ## Features
 
@@ -14,18 +14,21 @@ This project fetches historical cryptocurrency price data from Binance and analy
 Ensure you have the following dependencies installed:
 
 ```bash
-pip install pandas numpy matplotlib python-binance
+pip install -r requirements.txt
 ```
 
 ## Configuration
 
-Create a `config.py` file to store your Binance API credentials:
+Create `config/myconfig.py` to store your Binance API credentials:
+
+```bash
+cp config/myconfig_template.py config/myconfig.py
+```
 
 ```python
-# config.py
-class myconfig:
-    BINANCE_API_KEY = "your_api_key_here"
-    BINANCE_API_SECRET = "your_api_secret_here"
+# config/myconfig.py
+API_KEY = "your_api_key_here"
+API_SECRET = "your_api_secret_here"
 ```
 
 ## Usage
